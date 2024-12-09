@@ -27,8 +27,8 @@ class NewItemViewViewModel : ObservableObject {
         let newItem = TodoListItem(
             id: newid,
             title: title,
-            DueDate: DueDate.timeIntervalSince1970,
-            CreatedDate: Date().timeIntervalSince1970,
+            dueDate: DueDate.timeIntervalSince1970,
+            createdDate: Date().timeIntervalSince1970,
             isDone: false)
         
         // save models  to fb
@@ -37,8 +37,8 @@ class NewItemViewViewModel : ObservableObject {
             .document(uId)
             .collection("todos")
             . document(newid)
-            .setData(newItem.asDictionary())
-
+            .setData(newItem.asDictionary()) // formatting newItem in the form of dictionary
+        
     }
     //MARK: VALIDATION
     var canSave : Bool {

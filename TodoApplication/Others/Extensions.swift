@@ -7,22 +7,27 @@
 
 import Foundation
 
+
 // extensions are used to add extra functionality
 extension Encodable {
     
     func asDictionary() -> [String:Any] {
         guard let data = try? JSONEncoder().encode(self) else {
+            print("Encoding failed.")
             return [:]
         }
         do{
-            let json = try? JSONSerialization.jsonObject(with: data) as? [String:Any]
-            return json ?? [:]
-             
-        }
-        catch{
+            if let json = try? JSONSerialization.jsonObject(with: data) as? [String:Any]{
+                return json
+            }
+            else{
+                throw NSError(domain: "EncodingError", code: 1001, userInfo: [NSLocalizedDescriptionKey: "Failed to cast JSON data to dictionary."])
+            }
+            
+        }catch{
+            print("Error during JSONSerialization: \(error.localizedDescription)")
             return [:]
+            
         }
-        
     }
-    
 }

@@ -9,30 +9,30 @@ import SwiftUI
 //Today's Game Plan
 //A goal without a plan is just a wish.
 struct HeaderView: View {
-    var Title : String = ""
-    var SubTitle : String = ""
-    let backgroundColor : Color
+    var title : String = ""
+    var subTitle : String = ""
+    let gradients: LinearGradient
     var angle : Double
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 0)
-                .foregroundColor(backgroundColor)
+                .fill(gradients)
                 . rotationEffect(Angle(degrees: angle))
             VStack{
-                Text(Title)
-                    .font(.system(size: 30))
+                Text(title)
+                    .font(.system(.body))
                     .fontWeight(.heavy)
                     .bold()
                     .foregroundStyle(.white)
                     .padding()
-                Text(SubTitle)
+                Text(subTitle)
                     .fontWeight(.light)
                     .foregroundStyle(.white)
             }
             .padding(.top,30)
             
         }
-        .frame(width: UIScreen.main.bounds.width * 3, height: 350)
+        .frame(width: UIScreen.main.bounds.width * 3)
         .offset(y:-100)
         Spacer()
     }
@@ -40,5 +40,9 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView(Title: "Today's Game Plan", SubTitle: "A goal without a plan is just a wish.", backgroundColor: .cyan, angle: -15)
+    HeaderView(title: "Today's Game Plan",subTitle: "A goal without a plan is just a wish.",  gradients: LinearGradient(
+        gradient: Gradient(colors: [.cyan, .orange]),
+        startPoint: .bottom,
+        endPoint: .top
+    ), angle: -15)
 }

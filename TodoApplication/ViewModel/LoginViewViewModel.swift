@@ -15,7 +15,7 @@ class LoginViewViewModel : ObservableObject{
     init() {}
     
     // MARK: LOGIN AUTH
-
+    
     func Login(){
         guard validate() else{
             return
@@ -26,7 +26,7 @@ class LoginViewViewModel : ObservableObject{
     
     // MARK: VALIDATION
     
-   private func validate() -> Bool{
+    private func validate() -> Bool{
         error = ""
         guard !Email.trimmingCharacters(in: .whitespaces).isEmpty,
               !Password.trimmingCharacters(in: .whitespaces).isEmpty else{
@@ -39,6 +39,6 @@ class LoginViewViewModel : ObservableObject{
             error = "Please Enter valid Email"
             return false
         }
-       return true
+        return true
     }
 }

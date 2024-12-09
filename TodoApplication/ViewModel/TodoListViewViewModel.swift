@@ -10,8 +10,8 @@ import FirebaseFirestore
 
 class TodoListViewViewModel :ObservableObject{
     @Published var ShowItem = false
-     private let userid : String
-     init(userid: String){
+    private let userid : String
+    init(userid: String){
         self.userid = userid
     }
     
@@ -25,4 +25,4 @@ class TodoListViewViewModel :ObservableObject{
             .delete()
     }
 }
- 
+

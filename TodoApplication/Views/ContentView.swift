@@ -12,7 +12,7 @@ struct ContentView: View {
     @StateObject var viewModel = ContentViewViewModel()
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currUserId.isEmpty {
-          accountView
+            accountView
         }
         else
         {
@@ -25,10 +25,12 @@ struct ContentView: View {
             TodoListView(userid: viewModel.currUserId)
                 .tabItem {
                     Label("Home", systemImage: "house")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
             ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.circle")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
             
         }

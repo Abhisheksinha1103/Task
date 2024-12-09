@@ -26,17 +26,17 @@ class RegisterViewViewModel : ObservableObject{  // published is used when if an
             
         }
     }
-        // MARK: INSERT RECORD IN FB
-       // Date().timeIntervalSince1970 when you save the exact moment an event happens like when a user logs in.
-        private func insertUserRecord(id: String)
-        {
-            let newUser =  users(id:  id, name: Name, email: email, joined: Date().timeIntervalSince1970)
-            let db = Firestore.firestore() /// database Creation in the form of collection  and documents
-            db.collection("users")
-                .document(id)
-                .setData(newUser.asDictionary()) 
-        }
-        
+    // MARK: INSERT RECORD IN FB
+    // Date().timeIntervalSince1970 when you save the exact moment an event happens like when a user logs in.
+    private func insertUserRecord(id: String)
+    {
+        let newUser =  users(id:  id, name: Name, email: email, joined: Date().timeIntervalSince1970)
+        let db = Firestore.firestore() /// database Creation in the form of collection  and documents
+        db.collection("users")
+            .document(id)
+            .setData(newUser.asDictionary())
+    }
+    
     // MARK: VALIDATION
     
     private func validate() -> Bool {
@@ -51,6 +51,6 @@ class RegisterViewViewModel : ObservableObject{  // published is used when if an
         guard password.count >= 6 else {
             return false
         }
-       return true
+        return true
     }
 }

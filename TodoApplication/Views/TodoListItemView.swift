@@ -18,7 +18,7 @@ struct TodoListItemView: View {
                 Text(item.title)
                     .font(.body)
                     .bold()
-                Text("\(Date(timeIntervalSince1970: item.DueDate).formatted(date: .abbreviated, time: .shortened))")
+                Text("\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))")
                     .font(.footnote)
                     .foregroundStyle(Color(.secondaryLabel))
             }
@@ -26,16 +26,16 @@ struct TodoListItemView: View {
             Button(action: {
                 viewModel.isToggleDone(item: item) //function call
             }
-        , label: {
+                   , label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
                     .foregroundColor(Color.cyan)
             })
         }
-      
+        
     }
 }
 
 #Preview {
-    TodoListItemView(item: .init(id: "123", title: "Get Milk", DueDate: Date().timeIntervalSince1970, CreatedDate: Date().timeIntervalSince1970, isDone: true))
+    TodoListItemView(item: .init(id: "123", title: "Get Milk", dueDate: Date().timeIntervalSince1970, createdDate: Date().timeIntervalSince1970, isDone: true))
     
 }

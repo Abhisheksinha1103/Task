@@ -22,7 +22,7 @@ struct NewItemView: View {
                     .textFieldStyle(DefaultTextFieldStyle())
                 DatePicker("Due Date", selection: $viewModel.DueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
-                ButtonView(title: "Save", background: Color.green){
+                ButtonView(title: "Save", background: Color.pink){
                     if viewModel.canSave{
                         viewModel.save()
                         newItemPresented = false // IT WILL CLOSE THE SHEET VIEW AND JUMP BACK TO LIST OF ITEMS
@@ -32,7 +32,7 @@ struct NewItemView: View {
                         viewModel.IsAlert = true
                     }
                 }
-               
+                
                 .padding()
             }
             .alert(isPresented: $viewModel.IsAlert, content: {

@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct RegisterView: View {
-   @StateObject var registerView = RegisterViewViewModel()
+    
+    @StateObject var registerView = RegisterViewViewModel()
+    
     var body: some View {
-        
         VStack{
-            HeaderView(Title: "Register", SubTitle: "Start Building TODO.", backgroundColor: Color.orange, angle: 15)
+            HeaderView(title: "Register", subTitle: "Start Building TODO.", gradients: LinearGradient(
+                gradient: Gradient(colors: [.indigo,.purple,.cyan]),
+                startPoint: .top,
+                endPoint: .bottom
+            ), angle: 15)
+            .background(Color.cyan)
             
             Form{
                 TextField("Full Name", text: $registerView.Name)
@@ -23,18 +29,17 @@ struct RegisterView: View {
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                
                 SecureField("password", text: $registerView.password)
                     .textFieldStyle(DefaultTextFieldStyle())
-                ButtonView(title:"Register" , background: .orange) {
+                
+                ButtonView(title:"Register" , background: .cyan) {
                     registerView.Register()
                 }
             }
-            
-            
             Spacer()
-            }
+        }
         .offset(y:-40)
-       
     }
 }
 

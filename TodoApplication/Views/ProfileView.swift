@@ -20,10 +20,15 @@ struct ProfileView: View {
                     ProgressView()
                 }
             }
+            .frame(width: 500)
             .navigationTitle("Profile")
+            .background(
+                LinearGradient(colors: [Color.cyan,Color.orange], startPoint: .topTrailing, endPoint:.topLeading).blur(radius: 100))
         }
         .onAppear(){
-            viewModel.fetchUser()
+            Task {
+                await viewModel.fetchUser()  // Call async method
+            }
         }
         
     }
@@ -57,6 +62,7 @@ struct ProfileView: View {
             .padding()
             
         }
+        
         Button("Log out"){
             viewModel.Logout()
         }

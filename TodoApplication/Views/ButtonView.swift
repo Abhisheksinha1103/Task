@@ -12,18 +12,18 @@ struct ButtonView: View {
     let background : Color
     let action: () -> Void // closures
     var body: some View {
-       
+        
         Button(action: {
             action()
         }
-       ,label: {
+               ,label: {
             ZStack{
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundStyle(background)
                 Text(title)
                     .foregroundStyle(Color.white)
                 
-                 }
+            }
         })
         .padding()
     }

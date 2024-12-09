@@ -20,7 +20,12 @@ class ContentViewViewModel : ObservableObject {
         self.handler = Auth.auth().addStateDidChangeListener({ [weak self] _, user in
             
             DispatchQueue.main.async {
-                self?.currUserId = user?.uid ?? ""
+                if let userId = user?.uid, !userId.isEmpty {
+                    self?.currUserId = userId
+                } else {
+                    // If user ID is nil or empty
+                    self?.currUserId = "Guest_user" // default value
+                }
             }
         })
     }
