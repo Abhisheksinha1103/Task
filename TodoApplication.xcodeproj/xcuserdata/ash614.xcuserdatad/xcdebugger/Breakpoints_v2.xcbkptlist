@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1ABA2B82-0AA4-4D58-8642-697213BEA862"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61493249-DC54-43F5-BC7C-D79D5AECF79C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TodoApplication/ViewModel/TodoListItemViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3"
+            endingLineNumber = "3"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "4F5EFA41-B585-40A9-A4E1-7603C85CDCAB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "9E8F3A4F-7A7F-4870-B07E-9BE054DDF44F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "E4B46A62-3263-4DD9-A954-208119DB5AAE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BC883F6-374F-4947-9A4F-72EB9F257748"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TodoApplication/Views/TodoListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0BC883F6-374F-4947-9A4F-72EB9F257748 - 5300800ade8487ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in TodoApplication.TodoListView.body.getter : some"
+                  moduleName = "TodoApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ash614/Desktop/TodoApplication/TodoApplication/Views/TodoListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "0BC883F6-374F-4947-9A4F-72EB9F257748 - 27e96581410ef735"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in TodoApplication.TodoListView.body.getter : some"
+                  moduleName = "TodoApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ash614/Desktop/TodoApplication/TodoApplication/Views/TodoListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
